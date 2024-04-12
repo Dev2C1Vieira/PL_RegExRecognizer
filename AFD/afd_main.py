@@ -79,7 +79,7 @@ class AFD:
                     next_states.append(next_state)
             
             if not next_states:
-                error_message = f"Transição inválida de '{current_states}' para '{next_states}' com o símbolo '{symbol}'"
+                error_message = f"Transição inválida de '{current_states}' com o símbolo '{symbol}'"
                 return False, path, error_message
             
             path.append(symbol)
