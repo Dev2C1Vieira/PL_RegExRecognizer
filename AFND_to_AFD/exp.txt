@@ -1,0 +1,34 @@
+expressao regular : (ab∣c)∗d
+
+{
+  "op": "seq",
+  "args": [
+    {
+      "op": "kle",
+      "args": [
+        {
+          "op": "alt",
+          "args": [
+            {
+              "op": "seq",
+              "args": [
+                {
+                  "simb": "a"
+                },
+                {
+                  "simb": "b"
+                }
+              ]
+            },
+            {
+              "simb": "c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "simb": "d"
+    }
+  ]
+}
