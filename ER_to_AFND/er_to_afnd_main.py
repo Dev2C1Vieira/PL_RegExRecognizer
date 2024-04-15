@@ -72,7 +72,6 @@ def generate_afnd(expression_tree):
         "F": list(final_states)  # Convertendo o conjunto de estados finais F de volta para uma lista
     }
 
-
 def main(input_file, output_file):
     with open(input_file, 'r') as f:
         expression_tree = json.load(f)

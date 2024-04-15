@@ -1,0 +1,74 @@
+{
+    "op": "alt",
+    "args": [
+        {
+            "op": "seq",
+            "args": [
+                {"simb": "a"},
+                {
+                    "op": "kle",
+                    "args": [{"simb": "c"}]
+                },
+                {"simb": "b"}
+            ]
+        },
+        {
+            "op": "seq",
+            "args": [
+                {"simb": "a"},
+                {
+                    "op": "kle",
+                    "args": [{"simb": "d"}]
+                },
+                {"simb": "a"}
+            ]
+        },
+        {
+            "op": "seq",
+            "args": [
+                {"simb": "a"},
+                {"simb": "d"}
+            ]
+        },
+        {
+            "op": "seq",
+            "args": [
+                {"simb": "c"},
+                {
+                    "op": "kle",
+                    "args": [{"simb": "d"}]
+                },
+                {"simb": "a"}
+            ]
+        },
+        {
+            "op": "seq",
+            "args": [
+                {"simb": "b"},
+                {
+                    "op": "kle",
+                    "args": [{"simb": "d"}]
+                },
+                {"simb": "a"}
+            ]
+        },
+        {
+            "op": "seq",
+            "args": [
+                {"simb": "b"},
+                {
+                    "op": "kle",
+                    "args": [{"simb": "d"}]
+                },
+                {"simb": "b"}
+            ]
+        },
+        {
+            "op": "seq",
+            "args": [
+                {"simb": "c"},
+                {"simb": "d"}
+            ]
+        }
+    ]
+}
