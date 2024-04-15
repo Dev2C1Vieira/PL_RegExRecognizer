@@ -95,7 +95,9 @@ class AFNDtoAFD:
                 dot.node(estado_str)
 
         dot.node('inicial', shape='point')
-        dot.edge('inicial', ",".join(map(str, self.q0)))
+
+        if self.q0: 
+            dot.edge('inicial', ",".join(self.q0))
 
         for origem, transicoes in self.delta.items():
             origem_str = ",".join(sorted(map(str, origem)))
@@ -107,7 +109,10 @@ class AFNDtoAFD:
                     else:
                         dot.edge(origem_str, destino_str, label="ε")
 
-        dot.render(arquivo_saida, format='png', cleanup=True)
+        dot.render(f"digraph/{arquivo_saida}", format='dot', cleanup=True)
+        print(f"Graphviz representation generated: {arquivo_saida}.dot")
+
+        dot.render(f"digraph/{arquivo_saida}", format='png', cleanup=True)
         print(f"Representação Graphviz gerada: {arquivo_saida}.png")
 
 

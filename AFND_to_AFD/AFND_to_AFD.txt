@@ -1,0 +1,122 @@
+q0′=fecho−ε({q0})=fecho−ε({q1})
+
+={q1} ∪ fecho−ε(trans(q1,ε))
+
+={q1} ∪ fecho−ε({q2})
+
+={q1}∪{q2}∪fecho−ε(trans(q2,ε))
+
+={q1}∪{q2}∪fecho−ε({q4})
+
+={q1}∪{q2}∪{q4}
+
+={q1,q2,q4}=N1
+
+Estados = {N1,N2,N3,N4,N5}
+
+Estados finais = {N3,N5}
+
+| t′ |   a  |   b  |   c  |   d  |
+| N1 |  N2  | n.d. | n.d. |  N3  |
+| N2 |  N2  |  N4  | n.d. |  N3  |
+| N3 | n.d. | n.d. | n.d. | n.d. |
+| N4 | n.d. | n.d. |  N5  | n.d. |
+| N5 | n.d. | n.d. |  N5  | n.d. |
+​
+ Para N1={q1,q2,q4}:
+
+t′(N1,a)=fecho−ε(trans(q1,a)∪trans(q2,a)∪trans(q4,a))
+=fecho−ε({q3}∪{q3}∪{})
+=fecho−ε({q3})
+={q2,q3,q4}=N2
+
+t′(N1,b)=fecho−ε(trans(q1,b)∪trans(q2,b)∪trans(q4,b))
+=fecho−ε({}∪{}∪{})
+=n.d.
+​
+t′(N1,c)=fecho−ε(trans(q1,c)∪trans(q2,c)∪trans(q4,c))
+=fecho−ε({}∪{}∪{})
+=n.d. 
+​
+t′(N1,d)=fecho−ε(trans(q1,d)∪trans(q2,d)∪trans(q4,d))
+=fecho−ε({}∪{}∪{q6})
+=fecho−ε({q6})
+={q6,q7}=N3 (novo estado, é final porque contém o estado q7) 
+
+
+Para N2={q2,q3,q4}:
+
+t′(N2,a)=fecho−ε(trans(q2,a)∪trans(q3,a)∪trans(q4,a))
+=fecho−ε({q3}∪{q3}∪{})
+=fecho−ε({q3})
+={q2,q3,q4}=N2
+
+t′(N2,b)=fecho−ε(trans(q2,b)∪trans(q3,b)∪trans(q4,b))
+=fecho−ε({}∪{q5}∪{})
+=fecho−ε({q5})
+={q5}=N4 (novo estado)
+
+t′(N2,c)=fecho−ε(trans(q2,c)∪trans(q3,c)∪trans(q4,c))
+=fecho−ε({}∪{}∪{})
+={}=n.d.
+
+t′(N2,d)=fecho−ε(trans(q2,d)∪trans(q3,d)∪trans(q4,d))
+=fecho−ε({}∪{}∪{})
+={}=n.d.
+
+
+Para N3={q6,q7}:
+
+t′(N3,a)=fecho−ε(trans(q6,a)∪trans(q7,a))
+=fecho−ε({}∪{})
+={}=n.d.
+
+t′(N3,b)=fecho−ε(trans(q6,b)∪trans(q7,b))
+=fecho−ε({}∪{})
+={}=n.d.
+
+t′(N3,c)=fecho−ε(trans(q6,c)∪trans(q7,c))
+=fecho−ε({}∪{})
+={}=n.d.
+
+t′(N3,d)=fecho−ε(trans(q6,d)∪trans(q7,d))
+=fecho−ε({}∪{})
+={}=n.d.
+
+
+Para N4={q5}:
+
+t′(N4,a)=fecho−ε(trans(q5,a))
+=fecho−ε({})
+={}=n.d.
+
+t′(N4,b)=fecho−ε(trans(q5,b))
+=fecho−ε({})
+={}=n.d.
+
+t′(N4,c)=fecho−ε(trans(q5,c))
+=fecho−ε({q5,q7})
+={q5,q6,q7}=N5 (novo estado, é final porque contém o estado q7)
+
+t′(N4,d)=fecho−ε(trans(q5,d))
+=fecho−ε({})
+={}=n.d.
+
+
+Para N5={q5,q6,q7}:
+
+t′(N5,a)=fecho−ε(trans(q5,a)∪trans(q6,a)∪trans(q7,a))
+=fecho−ε({}∪{}∪{})
+={}=n.d.
+
+t′(N5,b)=fecho−ε(trans(q5,b)∪trans(q6,b)∪trans(q7,b))
+=fecho−ε({}∪{}∪{})
+={}=n.d.
+
+t′(N5,c)=fecho−ε(trans(q5,c)∪trans(q6,c)∪trans(q7,c))
+=fecho−ε({q5,q7}∪{}∪{})
+={q5,q6,q7}=N5
+
+t′(N5,d)=fecho−ε(trans(q5,d)∪trans(q6,d)∪trans(q7,d))
+=fecho−ε({}∪{}∪{})
+={}=n.d.
