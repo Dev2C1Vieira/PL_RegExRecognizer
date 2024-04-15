@@ -28,7 +28,6 @@ def generate_afnd(expression_tree):
 
         if "op" in node and node["op"] == "alt":
             epsilon_states = []
-            has_final_state = False
             for arg in node["args"]:
                 if "epsilon" in arg:
                     epsilon_state = "q" + str(len(Q))
@@ -36,9 +35,7 @@ def generate_afnd(expression_tree):
                     epsilon_states.append(epsilon_state)
                 else:
                     next_state = explore_tree(arg, current_state)
-                    if next_state in final_states:
-                        has_final_state = True
-            if epsilon_states or has_final_state:
+            if epsilon_states:
                 for epsilon_state in epsilon_states:
                     add_transition(current_state, "", epsilon_state)
             return current_state
@@ -54,6 +51,14 @@ def generate_afnd(expression_tree):
             add_transition(next_state, "", current_state)
             return current_state
         
+        # Verificar se o próximo estado é um estado final após a chamada recursiva
+        next_state = current_state
+        for arg in node["args"]:
+            next_state = explore_tree(arg, next_state)
+        if next_state in final_states:
+            final_states.add(next_state)
+        return next_state
+    
     q0 = "q0"
     Q.append(q0)
     final_state = explore_tree(expression_tree, q0)
@@ -66,6 +71,7 @@ def generate_afnd(expression_tree):
         "q0": q0,
         "F": list(final_states)  # Convertendo o conjunto de estados finais F de volta para uma lista
     }
+
 
 def main(input_file, output_file):
     with open(input_file, 'r') as f:
