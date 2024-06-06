@@ -1,7 +1,7 @@
 import json
 import sys
 from collections import deque
-from graphviz import Digraph
+from graphviz import Digraph, ExecutableNotFound
 
 
 class AFNDtoAFD:
@@ -14,6 +14,12 @@ class AFNDtoAFD:
         self.delta = {}
         self.q0 = None
         self.F = []
+
+        if filename.endswith('.json'):
+            self.load_afd_from_json(filename)
+        else:
+            print("Erro: O arquivo fornecido não é um arquivo JSON.")
+            sys.exit(1)
 
     def calcular_fecho_epsilon(self, estado):
         fecho = set([estado])
@@ -60,20 +66,20 @@ class AFNDtoAFD:
                         self.Q.append(tuple(sorted(proximos_estados)))
                         fila.append(tuple(sorted(proximos_estados)))
 
-        for estado in self.Q:   
+        for estado in self.Q:
             for estado_final in self.afnd["F"]:
                 if estado_final in estado:
                     self.F.append(estado)
                     break
 
-        self.q0 = fecho_q0  
+        self.q0 = fecho_q0
 
         delta_converted = {}
         for key, value in self.delta.items():
             new_key = ','.join(map(str, key))
             new_value = {k: list(map(str, v)) for k, v in value.items()}
             delta_converted[new_key] = new_value
-         
+
         afd = {
             "Q": [sorted(map(str, q)) for q in self.Q],
             "V": self.V,
@@ -84,36 +90,56 @@ class AFNDtoAFD:
 
         return afd
 
-    def gerar_graphviz(self, arquivo_saida):
+    def load_afd_from_json(self, filename):
+        with open(filename, 'r', encoding='utf-8') as file:
+            afd_definition = json.load(file)
+
+        required_keys = ["Q", "V", "delta", "q0", "F"]
+
+        for key in required_keys:
+            if key not in afd_definition:
+                print(f"Erro: Chave '{key}' ausente na definição do autômato.")
+                sys.exit(1)
+
+        self.states = afd_definition["Q"]
+        self.alphabet = afd_definition["V"]
+        self.transitions = afd_definition["delta"]
+        self.initial_state = afd_definition["q0"]
+        self.final_states = afd_definition["F"]
+
+        # Realizar mais validações conforme necessário
+        print("Autômato carregado com sucesso a partir do arquivo JSON.")
+
+    def generate_graphviz(self, output_file):
         dot = Digraph()
 
-        for estado in self.Q:
-            estado_str = ",".join(sorted(map(str, estado)))
-            if estado in self.F:
-                dot.node(estado_str, shape='doublecircle')
+        for state in self.states:
+            if state in self.final_states:
+                dot.node(state, shape='doublecircle')
             else:
-                dot.node(estado_str)
+                dot.node(state)
 
-        dot.node('inicial', shape='point')
+        dot.node('initial', shape='point')
+        dot.edge('initial', self.initial_state)
 
-        if self.q0: 
-            dot.edge('inicial', ",".join(self.q0))
-
-        for origem, transicoes in self.delta.items():
-            origem_str = ",".join(sorted(map(str, origem)))
-            for simbolo, destinos in transicoes.items():
-                for destino in destinos:
-                    destino_str = ",".join(sorted(map(str, destino)))
-                    if simbolo != "":
-                        dot.edge(origem_str, destino_str, label=simbolo)
+        for origin, transitions in self.transitions.items():
+            for symbol, destinations in transitions.items():
+                for destination in destinations:
+                    if symbol != "Ɛ":
+                        dot.edge(origin, destination, label=symbol)
                     else:
-                        dot.edge(origem_str, destino_str, label="ε")
+                        dot.edge(origin, destination, label="ε")
 
-        dot.render(f"digraph/{arquivo_saida}", format='dot', cleanup=True)
-        print(f"Graphviz representation generated: {arquivo_saida}.dot")
+        try:
+            # Salvando o arquivo .dot na pasta 'digraph'
+            dot.render(f"digraph/afd/{output_file}", format='dot', cleanup=True)
+            print(f"Graphviz representation generated: digraph/{output_file}.dot")
 
-        dot.render(f"digraph/{arquivo_saida}", format='png', cleanup=True)
-        print(f"Representação Graphviz gerada: {arquivo_saida}.png")
+            # Salvando o arquivo .png na pasta 'digraph'
+            dot.render(f"digraph/afd/{output_file}", format='png', cleanup=True)
+            print(f"Graphviz representation generated: digraph/{output_file}.png")
+        except ExecutableNotFound:
+            print("Graphviz executável 'dot' não encontrado. Por favor, verifique se o Graphviz está instalado corretamente e adicionado ao seu PATH.")
 
 
 def main():
@@ -128,7 +154,7 @@ def main():
         conversor = AFNDtoAFD(nome_arquivo)
 
         if operacao == "-graphviz":
-            conversor.gerar_graphviz("grafo_afd")
+            conversor.generate_graphviz("grafo_afd")
             print("Ficheiro Graphviz gerado com sucesso.")
         elif operacao == "-output":
             afd = conversor.converter()
