@@ -1,0 +1,32 @@
+
+
+Tabelas de transições resultantes da conversão do AFND para AFD
+
+
+Tabela de transições do autómato finito não determinista (AFND)
+
+
+  trans |   .   +   -   0   1   2   3   4   5   6   7   8   9   ε   
+     q1 |   -   q2  q2  q3  q3  q3  q3  q3  q3  q3  q3  q3  q3  -
+     q2 |   -   -   -   q3  q3  q3  q3  q3  q3  q3  q3  q3  q3  -
+     q3 |   q4  -   -   q3  q3  q3  q3  q3  q3  q3  q3  q3  q3  -
+     q4 |   -   -   -   q5  q5  q5  q5  q5  q5  q5  q5  q5  q5  q3
+     q5 |   q6  -   -   q5  q5  q5  q5  q5  q5  q5  q5  q5  q5  -
+     q6 |   -   q6  -   -   -   -   -   -   -   -   -   -   -   -
+
+
+
+Tabela de transições do autómato finito determinista (AFD)
+
+  trans |   .   +   -   0   1   2   3   4   5   6   7   8   9   
+     N1 |   -   N2  N2  N3  N3  N3  N3  N3  N3  N3  N3  N3  N3  
+     N2 |   -   -   -   N3  N3  N3  N3  N3  N3  N3  N3  N3  N3  
+     N3 |   N4  -   -   N3  N3  N3  N3  N3  N3  N3  N3  N3  N3  
+     N4 |   N5  -   -   N6  N6  N6  N6  N6  N6  N6  N6  N6  N6  
+     N5 |   -   -   -   N7  N7  N7  N7  N7  N7  N7  N7  N7  N7  
+     N6 |   N8  -   -   N6  N6  N6  N6  N6  N6  N6  N6  N6  N6  
+     N7 |   N9  -   -   N7  N7  N7  N7  N7  N7  N7  N7  N7  N7  
+     N8 |   N10 -   -   N6  N6  N6  N6  N6  N6  N6  N6  N6  N6  
+     N9 |   -   N9  -   -   -   -   -   -   -   -   -   -   -   
+    N10 |   N4  N9  -   N6  N6  N6  N6  N6  N6  N6  N6  N6  N6  
+    

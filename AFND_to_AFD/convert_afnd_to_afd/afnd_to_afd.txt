@@ -1,0 +1,636 @@
+
+
+Converter em AFD
+
+Estado inicial:
+
+fecho−ε(q1) = fecho−ε(trans(q1, ε))
+            = { q1 } U {  }
+            = { q1 }: N1, estado novo.
+
+N1 -> { q1 }
+
+f' (N1, .) = fecho−ε(trans(q1, .))
+           = {  }: estado vazio.
+
+f' (N1, +) = fecho−ε(trans(q1, +))
+           = { q2 } U fecho−ε(trans(q2, ε))
+           = { q2 } U {  }
+           = { q2 }: N2, estado novo.
+
+f' (N1, -) = fecho−ε(trans(q1, -))
+           = { q2 } U fecho−ε(trans(q2, ε))
+           = { q2 } U {  }
+           = { q2 }: N2, estado já existente.
+
+f' (N1, 0) = fecho−ε(trans(q1, 0))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado novo.
+
+f' (N1, 1) = fecho−ε(trans(q1, 1))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 2) = fecho−ε(trans(q1, 2))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 3) = fecho−ε(trans(q1, 3))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 4) = fecho−ε(trans(q1, 4))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 5) = fecho−ε(trans(q1, 5))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 6) = fecho−ε(trans(q1, 6))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 7) = fecho−ε(trans(q1, 7))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 8) = fecho−ε(trans(q1, 8))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N1, 9) = fecho−ε(trans(q1, 9))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+
+N2 -> { q2 }
+
+f' (N2, .) = fecho−ε(trans(q2, .))
+           = {  }: estado vazio.
+
+f' (N2, +) = fecho−ε(trans(q2, +))
+           = {  }: estado vazio.
+
+f' (N2, -) = fecho−ε(trans(q2, -))
+           = {  }: estado vazio.
+
+f' (N2, 0) = fecho−ε(trans(q2, 0))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 1) = fecho−ε(trans(q2, 1))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 2) = fecho−ε(trans(q2, 2))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 3) = fecho−ε(trans(q2, 3))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 4) = fecho−ε(trans(q2, 4))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 5) = fecho−ε(trans(q2, 5))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 6) = fecho−ε(trans(q2, 6))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 7) = fecho−ε(trans(q2, 7))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 8) = fecho−ε(trans(q2, 8))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N2, 9) = fecho−ε(trans(q2, 9))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+
+N3 -> { q3 }
+
+f' (N3, .) = fecho−ε(trans(q3, .))
+           = { q4 } U fecho−ε(trans(q4, ε))
+           = { q4 } U { q3 }
+           = { q3, q4 }: N4, estado novo.
+
+f' (N3, +) = fecho−ε(trans(q3, +))
+           = {  }: estado vazio.
+
+f' (N3, -) = fecho−ε(trans(q3, -))
+           = {  }: estado vazio.
+
+f' (N3, 0) = fecho−ε(trans(q3, 0))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 1) = fecho−ε(trans(q3, 1))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 2) = fecho−ε(trans(q3, 2))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 3) = fecho−ε(trans(q3, 3))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 4) = fecho−ε(trans(q3, 4))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 5) = fecho−ε(trans(q3, 5))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 6) = fecho−ε(trans(q3, 6))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 7) = fecho−ε(trans(q3, 7))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 8) = fecho−ε(trans(q3, 8))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+f' (N3, 9) = fecho−ε(trans(q3, 9))
+           = { q3 } U fecho−ε(trans(q3, ε))
+           = { q3 } U {  }
+           = { q3 }: N3, estado já existente.
+
+
+N4 -> { q3, q4 }
+
+f' (N4, .) = fecho−ε(trans(q3, .) U trans(q4, .))
+           = { q4 }: N5, estado novo.
+
+f' (N4, +) = fecho−ε(trans(q3, +) U trans(q4, +))
+           = {  }: estado vazio.
+
+f' (N4, -) = fecho−ε(trans(q3, -) U trans(q4, -))
+           = {  }: estado vazio.
+
+f' (N4, 0) = fecho−ε(trans(q3, 0) U trans(q4, 0))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado novo.
+
+f' (N4, 1) = fecho−ε(trans(q3, 1) U trans(q4, 1))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 2) = fecho−ε(trans(q3, 2) U trans(q4, 2))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 3) = fecho−ε(trans(q3, 3) U trans(q4, 3))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 4) = fecho−ε(trans(q3, 4) U trans(q4, 4))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 5) = fecho−ε(trans(q3, 5) U trans(q4, 5))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 6) = fecho−ε(trans(q3, 6) U trans(q4, 6))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 7) = fecho−ε(trans(q3, 7) U trans(q4, 7))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 8) = fecho−ε(trans(q3, 8) U trans(q4, 8))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N4, 9) = fecho−ε(trans(q3, 9) U trans(q4, 9))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+           = { q3 } U { q5 } U ( {  } U { q3 } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+N5 -> { q4 }
+
+f' (N5, .) = fecho−ε(trans(q4, .))
+           = {  }: estado vazio.
+
+f' (N5, +) = fecho−ε(trans(q4, +))
+           = {  }: estado vazio.
+
+f' (N5, -) = fecho−ε(trans(q4, -))
+           = {  }: estado vazio.
+
+f' (N5, 0) = fecho−ε(trans(q4, 0))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado novo.
+
+f' (N5, 1) = fecho−ε(trans(q4, 1))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N5, 2) = fecho−ε(trans(q4, 2))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N5, 3) = fecho−ε(trans(q4, 3))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N5, 4) = fecho−ε(trans(q4, 4))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+    
+f' (N5, 5) = fecho−ε(trans(q4, 5))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N5, 6) = fecho−ε(trans(q4, 6))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N5, 7) = fecho−ε(trans(q4, 7))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N5, 8) = fecho−ε(trans(q4, 8))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N5, 9) = fecho−ε(trans(q4, 9))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+
+N6 -> { q3, q5 }
+
+f' (N6, .) = fecho−ε(trans(q3, .) U trans(q5, .))
+           = { q4 } U { q6 } U (fecho−ε(trans(q4, ε) U trans(q6, ε)))
+           = { q4 } U { q6 } U ( { q3 } U {  } )
+           = { q3, q4, q5 }: N8, estado novo.
+
+f' (N6, +) = fecho−ε(trans(q3, +) U trans(q5, +))
+           = {  } U {  }
+           = {  }: estado vazio.
+
+f' (N6, -) = fecho−ε(trans(q3, -) U trans(q5, -))
+           = {  } U {  }
+           = {  }: estado vazio.
+
+f' (N6, 0) = fecho−ε(trans(q3, 0) U trans(q5, 0))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 1) = fecho−ε(trans(q3, 1) U trans(q5, 1))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 2) = fecho−ε(trans(q3, 2) U trans(q5, 2))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 3) = fecho−ε(trans(q3, 3) U trans(q5, 3))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+        
+f' (N6, 4) = fecho−ε(trans(q3, 4) U trans(q5, 4))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 5) = fecho−ε(trans(q3, 5) U trans(q5, 5))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 6) = fecho−ε(trans(q3, 6) U trans(q5, 6))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 7) = fecho−ε(trans(q3, 7) U trans(q5, 7))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 8) = fecho−ε(trans(q3, 8) U trans(q5, 8))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N6, 9) = fecho−ε(trans(q3, 9) U trans(q5, 9))
+           = { q3 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+N7 -> { q5 }
+
+f' (N7, .) = fecho−ε(trans(q5, .))
+           = { q6 } U fecho−ε(trans(q6, ε))
+           = { q6 } U {  }
+           = { q6 }: N9, estado novo e final, pois está em 6.
+
+f' (N7, +) = fecho−ε(trans(q5, +))
+           = {  }: estado vazio.
+
+f' (N7, -) = fecho−ε(trans(q5, -))
+           = {  }: estado vazio.
+
+f' (N7, 0) = fecho−ε(trans(q5, 0))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 1) = fecho−ε(trans(q5, 1))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 2) = fecho−ε(trans(q5, 2))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 3) = fecho−ε(trans(q5, 3))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 4) = fecho−ε(trans(q5, 4))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 5) = fecho−ε(trans(q5, 5))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 6) = fecho−ε(trans(q5, 6))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 7) = fecho−ε(trans(q5, 7))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 8) = fecho−ε(trans(q5, 8))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+f' (N7, 9) = fecho−ε(trans(q5, 9))
+           = { q5 } U fecho−ε(trans(q5, ε))
+           = { q5 } U {  }
+           = { q5 }: N7, estado já existente.
+
+
+N8 -> { q3, q4, q5 }
+
+f' (N8, .) = fecho−ε(trans(q3, .) U trans(q4, .) U trans(q5, .))
+           = { q4 } U {  } U { q6 } U (fecho−ε(trans(q4, ε) U trans(q6, ε)))
+           = { q4 } U {  } U { q6 } U ( { q3 } U {  } )
+           = { q3, q4, q6 }: N10, estado novo e final, pois está em q6.
+
+f' (N8, +) = fecho−ε(trans(q3, +) U trans(q4, +) U trans(q5, +))
+           = {  } U {  } U {  }
+           = {  }: estado vazio.
+
+f' (N8, -) = fecho−ε(trans(q3, -) U trans(q4, -) U trans(q5, -))
+           = {  } U {  } U {  }
+           = {  }: estado vazio.
+
+f' (N8, 0) = fecho−ε(trans(q3, 0) U trans(q4, 0) U trans(q5, 0))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+f' (N8, 1) = fecho−ε(trans(q3, 1) U trans(q4, 1) U trans(q5, 1))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+f' (N8, 2) = fecho−ε(trans(q3, 2) U trans(q4, 2) U trans(q5, 2))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N8, 3) = fecho−ε(trans(q3, 3) U trans(q4, 3) U trans(q5, 3))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+f' (N8, 4) = fecho−ε(trans(q3, 4) U trans(q4, 4) U trans(q5, 4))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N8, 5) = fecho−ε(trans(q3, 5) U trans(q4, 5) U trans(q5, 5))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+f' (N8, 6) = fecho−ε(trans(q3, 6) U trans(q4, 6) U trans(q5, 6))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+f' (N8, 7) = fecho−ε(trans(q3, 7) U trans(q4, 7) U trans(q5, 7))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+f' (N8, 8) = fecho−ε(trans(q3, 8) U trans(q4, 8) U trans(q5, 8))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+f' (N8, 9) = fecho−ε(trans(q3, 9) U trans(q4, 9) U trans(q5, 9))
+           = { q3 } U { q5 } U { q5 } U (fecho−ε(trans(q3, ε) U trans(q5, ε)))
+           = { q3 } U { q5 } U { q5 } U ( {  } U {  } )
+           = { q3, q5 }: N6, estado já existente.
+
+
+N9 -> { q6 }
+
+f' (N9, .) = fecho−ε(trans(q6, .))
+           = {  }: estado vazio.
+    
+f' (N9, +) = fecho−ε(trans(q6, +))
+           = { q6 } U fecho−ε(trans(q6, ε))
+           = { q6 }: N9, estado já existente.
+
+f' (N9, -) = fecho−ε(trans(q6, -))
+           = {  }: estado vazio.
+
+f' (N9, 0) = fecho−ε(trans(q6, 0))
+           = {  }: estado vazio.
+
+f' (N9, 1) = fecho−ε(trans(q6, 1))
+           = {  }: estado vazio.
+
+f' (N9, 2) = fecho−ε(trans(q6, 2))
+           = {  }: estado vazio.
+    
+f' (N9, 3) = fecho−ε(trans(q6, 3))
+           = {  }: estado vazio.
+
+f' (N9, 4) = fecho−ε(trans(q6, 4))
+           = {  }: estado vazio.
+
+f' (N9, 5) = fecho−ε(trans(q6, 5))
+           = {  }: estado vazio.
+        
+f' (N9, 6) = fecho−ε(trans(q6, 6))
+           = {  }: estado vazio.
+
+f' (N9, 7) = fecho−ε(trans(q6, 7))
+           = {  }: estado vazio.
+
+f' (N9, 8) = fecho−ε(trans(q6, 8))
+           = {  }: estado vazio.
+
+f' (N9, 9) = fecho−ε(trans(q6, 9))
+           = {  }: estado vazio.
+
+
+N10 -> { q3, q4, q6 }
+
+f' (N10, .) = fecho−ε(trans(q3, .) U trans(q4, .) U trans(q6, .))
+            = { q4 } U {  } U {  } U fecho−ε(trans(q4, ε))
+            = { q4 } U {  } U {  } U { q3 }
+            = { q3, q4 }: N4, estado já existente.
+
+f' (N10, +) = fecho−ε(trans(q3, +) U trans(q4, +) U trans(q6, +))
+            = {  } U {  } U { q6 } U fecho−ε(trans(q6, ε))
+            = {  } U {  } U { q6 } U {  }
+            = { q6 }: N9, estado já existente.
+
+f' (N10, -) = fecho−ε(trans(q3, -) U trans(q4, -) U trans(q6, -))
+            = {  } U {  } U {  }
+            = {  }: estado vazio.
+
+f' (N10, 0) = fecho−ε(trans(q3, 0) U trans(q4, 0) U trans(q6, 0))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 1) = fecho−ε(trans(q3, 1) U trans(q4, 1) U trans(q6, 1))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 2) = fecho−ε(trans(q3, 2) U trans(q4, 2) U trans(q6, 2))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 3) = fecho−ε(trans(q3, 3) U trans(q4, 3) U trans(q6, 3))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 4) = fecho−ε(trans(q3, 4) U trans(q4, 4) U trans(q6, 4))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 5) = fecho−ε(trans(q3, 5) U trans(q4, 5) U trans(q6, 5))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 6) = fecho−ε(trans(q3, 6) U trans(q4, 6) U trans(q6, 6))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 7) = fecho−ε(trans(q3, 7) U trans(q4, 7) U trans(q6, 7))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 8) = fecho−ε(trans(q3, 8) U trans(q4, 8) U trans(q6, 8))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
+
+f' (N10, 9) = fecho−ε(trans(q3, 9) U trans(q4, 9) U trans(q6, 9))
+            = { q3 } U { q5 } U {  } U (fecho−ε(trans(q3, ε) U trans(q4, ε)))
+            = { q3 } U { q5 } U {  } U ( {  } U { q3 } )
+            = { q3, q5 }: N6, estado já existente.
