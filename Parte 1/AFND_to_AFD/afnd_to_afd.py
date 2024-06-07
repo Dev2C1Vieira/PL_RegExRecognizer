@@ -154,7 +154,7 @@ def main():
         conversor = AFNDtoAFD(nome_arquivo)
 
         if operacao == "-graphviz":
-            conversor.generate_graphviz("grafo_afd")
+            conversor.generate_graphviz("grafo_afd_teste")
             print("Ficheiro Graphviz gerado com sucesso.")
         elif operacao == "-output":
             afd = conversor.converter()
